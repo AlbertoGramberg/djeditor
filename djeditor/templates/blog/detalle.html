@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle blog</title>
+
+  {% include 'django_quill/media.html' %}
+</head>
+<body>
+  <h1>Detalle Blog</h1>
+  <div>
+    <p>{{ blog.title }}</p>
+    <p>{{ blog.author }}</p>
+    <div>
+      {{ blog.content.html|safe}}
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Lista Blgos</title>
+</head>
+<body>
+  <h3>Lista de blogs</h3>
+  <ul>
+    
+    {% for blog in lista_blogs  %}
+      <li>
+        <a href="{% url 'blog_app:detalle' blog.id %}">{{ blog.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'blog_app:add' %}">Agregar nuevo contenido</a>
+</body>
+</html>
